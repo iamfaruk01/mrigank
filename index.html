@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 HAPPY BIRTHDAY MRIGANKA! 🎉</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', 'Trebuchet MS', cursive, sans-serif;
+            background: linear-gradient(45deg, #FF6B9D, #FFC75F, #845EC2, #00D2FC, #FF6B9D);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: #ff6b6b;
+            pointer-events: none;
+            animation: confettiFall 3s ease-out forwards;
+        }
+
+        @keyframes confettiFall {
+            to {
+                transform: translateY(100vh) rotateZ(360deg);
+                opacity: 0;
+            }
+        }
+
+        .header {
+            text-align: center;
+            margin: 30px 0;
+            animation: bounce 1s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        h1 {
+            font-size: 4rem;
+            color: #fff;
+            text-shadow: 3px 3px 0px #FF6B9D, 6px 6px 0px #FFC75F, 9px 9px 0px #845EC2;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .birthday-message {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 600px;
+            margin: 20px auto;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            border: 5px dashed #FF6B9D;
+            text-align: center;
+        }
+
+        .birthday-message p {
+            font-size: 1.2rem;
+            color: #333;
+            margin: 15px 0;
+            line-height: 1.6;
+        }
+
+        .emoji-party {
+            font-size: 2rem;
+            animation: spin 2s linear infinite;
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .media-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 40px auto;
+            width: 100%;
+        }
+
+        .media-item {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 3px solid #FFC75F;
+        }
+
+        .media-item:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+        }
+
+        .media-item img,
+        .media-item video {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .media-label {
+            padding: 15px;
+            background: linear-gradient(135deg, #FF6B9D, #FFC75F);
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .video-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #FF6B9D;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+
+        .media-item-wrapper {
+            position: relative;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: white;
+            font-size: 1.1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .cake {
+            font-size: 3rem;
+            animation: wobble 0.5s ease-in-out infinite;
+        }
+
+        @keyframes wobble {
+            0%, 100% { transform: rotate(-1deg); }
+            50% { transform: rotate(1deg); }
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .fun-button {
+            background: linear-gradient(135deg, #FF6B9D, #FFC75F);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        .fun-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .fun-button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎉 HAPPY BIRTHDAY MRIGANKA! 🎉</h1>
+        <p class="subtitle">Another year older, but still as fabulous! 🌟</p>
+    </div>
+
+    <div class="birthday-message">
+        <p>
+            <span class="emoji-party">🎂</span>
+            Dear Mriganka, you're officially one year closer to becoming a wizard! 
+            <span class="emoji-party">🧙</span>
+        </p>
+        <p>
+            They say age is just a number... but in your case, it's a REALLY big number! 
+            <span class="emoji-party">😄</span>
+        </p>
+        <p>
+            Here's a collection of memories that prove you're absolutely LEGENDARY! 
+            <span class="emoji-party">⭐</span>
+        </p>
+        <p style="margin-top: 20px; font-size: 1.3rem;">
+            May your day be filled with cake, laughter, and zero responsibilities! 🎈
+        </p>
+    </div>
+
+    <div class="button-container">
+        <button class="fun-button" onclick="createConfetti()">🎊 CELEBRATE! 🎊</button>
+    </div>
+
+    <h2 style="text-align: center; color: white; margin-top: 40px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+        📸 LEGENDARY MOMENTS 📸
+    </h2>
+
+    <div class="media-container">
+        <!-- Photos -->
+        <div class="media-item">
+            <div class="media-item-wrapper">
+                <img src="IMG-20231221-WA0165.jpg" alt="Birthday Memory 1">
+            </div>
+            <div class="media-label">✨ Memory #1</div>
+        </div>
+
+        <div class="media-item">
+            <div class="media-item-wrapper">
+                <img src="IMG-20240603-WA0003.jpg" alt="Birthday Memory 2">
+            </div>
+            <div class="media-label">✨ Memory #2</div>
+        </div>
+
+        <div class="media-item">
+            <div class="media-item-wrapper">
+                <img src="IMG_20221108_215058.jpg" alt="Birthday Memory 3">
+            </div>
+            <div class="media-label">✨ Memory #3</div>
+        </div>
+
+        <div class="media-item">
+            <div class="media-item-wrapper">
+                <img src="IMG_20221217_002255.jpg" alt="Birthday Memory 4">
+            </div>
+            <div class="media-label">✨ Memory #4</div>
+        </div>
+
+        <div class="media-item">
+            <div class="media-item-wrapper">
+                <img src="IMG_20230206_145445.jpg" alt="Birthday Memory 5">
+            </div>
+            <div class="media-label">✨ Memory #5</div>
+        </div>
+
+        <div class="media-item">
+            <div class="media-item-wrapper">
+                <img src="IMG_20230206_145508.jpg" alt="Birthday Memory 6">
+            </div>
+            <div class="media-label">✨ Memory #6</div>
+        </div>
+
+        <div class="media-item">
+            <div class="media-item-wrapper">
+                <img src="IMG_20230206_150505.jpg" alt="Birthday Memory 7">
+            </div>
+            <div class="media-label">✨ Memory #7</div>
+        </div>
+
+        <div class="media-item">
+            <div class="media-item-wrapper">
+                <img src="IMG_20230330_113455.jpg" alt="Birthday Memory 8">
+            </div>
+            <div class="media-label">✨ Memory #8</div>
+        </div>
+
+        <div class="media-item">
+            <div class="media-item-wrapper">
+                <img src="IMG_20230829_154625.jpg" alt="Birthday Memory 9">
+            </div>
+            <div class="media-label">✨ Memory #9</div>
+        </div>
+
+        <div class="media-item">
+            <div class="media-item-wrapper">
+                <img src="IMG_20231006_145518.jpg" alt="Birthday Memory 10">
+            </div>
+            <div class="media-label">✨ Memory #10</div>
+        </div>
+
+        <div class="media-item">
+            <div class="media-item-wrapper">
+                <img src="IMG_20240322_131008.jpg" alt="Birthday Memory 11">
+            </div>
+            <div class="media-label">✨ Memory #11</div>
+        </div>
+
+        <div class="media-item">
+            <div class="media-item-wrapper">
+                <img src="PXL_20230718_053413396.jpg" alt="Birthday Memory 12">
+            </div>
+            <div class="media-label">✨ Memory #12</div>
+        </div>
+
+        <!-- Video -->
+        <div class="media-item">
+            <div class="media-item-wrapper">
+                <video controls>
+                    <source src="video_20230719_182924.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-badge">🎬 VIDEO</div>
+            </div>
+            <div class="media-label">🎥 The Legendary Moment!</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p class="cake">🎂</p>
+        <p>May your birthday be as awesome as you are!</p>
+        <p style="margin-top: 20px; font-size: 0.9rem;">
+            (And remember: You're not old, you're just becoming a classic! 😎)
+        </p>
+    </div>
+
+    <script>
+        function createConfetti() {
+            const colors = ['#FF6B9D', '#FFC75F', '#845EC2', '#00D2FC', '#FF9671', '#F8B500'];
+            
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * window.innerWidth + 'px';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.animationDelay = Math.random() * 0.5 + 's';
+                confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                document.body.appendChild(confetti);
+                
+                setTimeout(() => confetti.remove(), 5000);
+            }
+        }
+
+        // Auto-create confetti on page load
+        window.addEventListener('load', () => {
+            createConfetti();
+        });
+
+        // Create confetti every 5 seconds for extra fun
+        setInterval(createConfetti, 5000);
+    </script>
+</body>
+</html>
